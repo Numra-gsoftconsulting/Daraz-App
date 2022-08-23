@@ -27,9 +27,9 @@ function Apbar() {
   return (
     <Box sx={{ width: '100%', bgcolor: '#ffff', marginTop:'20px;', justifyContent:'center',}}>
        <ThemeProvider theme={theme}>
-       <Grid item xs={8} md={8}> 
+       <Grid item xs={1} md={12}> 
       <Grid container spacing={2}>
-        <Grid item xs={1} md={4}>
+        <Grid item xs={3} md={4}>
         <img src={logo} width={134} alt="Logo" />
         </Grid>
         <Grid item xs={3} md={4}>
@@ -47,10 +47,10 @@ function Apbar() {
    
 </FormControl>
         </Grid>
-        <Grid item md={1}  xs={1}>
+        <Grid item md={1}  xs={2}>
         <ShoppingCartIcon sx={{ fontSize: "50px" }} />
         </Grid>
-        <Grid item md={1} xs={1}>
+        <Grid item md={1} xs={3}>
         <img src={voucher} width={134} alt="Voucher" />
         </Grid>
        

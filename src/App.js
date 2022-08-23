@@ -1,19 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './Components/Navbar';
-import ApBar from './Components/Apbar';
-import Main from './Components/Main';
-import Footer from './Components/Footer';
+import Home from './Pages/Home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./Pages/Login";
+import ProtectedRoute from './Components/ProtectedRoutes';
+import SharedLayout from './Pages/SharedLayout';
+
 
 function App() {
   
   return (
-    <div className="App">
-  <Navbar/>
-  <ApBar/>
-  <Main />
-  <Footer />
-    </div>
+   
+ 
+  <BrowserRouter>
+    
+   <Routes>
+    
+   
+    <Route path='/' element={<SharedLayout />} >
+
+
+          {/* <Route element={<ProtectedRoute/>}> 
+          <Route path="" element={<Dasboard/>} />
+          </Route> */}
+          
+          <Route index element={<Home/>} />
+         
+  
+          <Route path='Login' element={<Login /> } />
+    
+   
+    </Route>
+   
+    </Routes>
+    </BrowserRouter>
+    
   );
 }
 

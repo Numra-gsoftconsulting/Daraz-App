@@ -4,12 +4,17 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Grid from '@mui/material/Grid';
 import Badge from '@mui/material/Badge';
-
-
-
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import { orange } from '@mui/material/colors';
 import { color } from '@mui/system';
+import {
+    MemoryRouter,
+    Route,
+    Routes,
+    Link,
+    matchPath,
+    useLocation,
+  } from 'react-router-dom';
 
 
 const theme = createTheme({
@@ -35,7 +40,7 @@ export default function CenteredTabs() {
 
   return (
    
-    <Grid item xs={12} md={12}> 
+    <Grid item xs={6} md={12}> 
     <Box sx={{ width: '100%', bgcolor: '#ececec' }}>
          <ThemeProvider theme={theme}>
       <Tabs value={value} onChange={handleChange} centered   textColor="primary"
@@ -47,7 +52,7 @@ export default function CenteredTabs() {
         <Tab label="SELL ON DARAZ" />
         <Tab label="CUSTOMER CARE" />
         <Tab label="TRACK MY ORDER" />
-        <Tab label="LOGIN" />
+        <Tab label="LOGIN" value="login" to="/login" component={Link} />
         <Tab label="SIGNUP" />
         <Tab label="زبان تبدیل کریں" />
         
