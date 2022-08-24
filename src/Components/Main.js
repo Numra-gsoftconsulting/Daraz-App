@@ -50,28 +50,29 @@ function Main() {
   return (
 
     
-    <Box sx={{ bgcolor: '#017c64', width: '100%', height:'350px', marginTop:'10px', fontSize:'5px', }} >
+    <Box sx={{ bgcolor: '#017c64', width: '100%', height:'350px', marginTop:'10px',overflow: 'hidden' }} >
        <Grid container >
        <Grid item md={1}>
         </Grid>
         <Grid item xs={3} md={2}>
-         
+        <Container sx={ {textAlign:'left'} }> 
   <Tabs
         orientation="vertical"
         variant="scrollable"
       
         aria-label="Vertical tabs example"
-        sx={{ marginTop:'none', borderColor: '#ffff',   bgcolor: '#ffff'}}
+        sx={{ marginTop:'none', borderColor: '#ffff',  textAlign:'left', bgcolor: '#ffff', }}
       >
-        <Tab label="Item One"  />
-        <Tab label="Item Two" />
-        <Tab label="Item Three"  />
-        <Tab label="Item Four"  />
-        <Tab label="Item Five"  />
-        <Tab label="Item Six"  />
-        <Tab label="Item Seven"  />
+        <Tab label="Groceries"  />
+        <Tab label="Health and Beauty" />
+        <Tab label="Womens Fashion"  />
+        <Tab label="Mens Fashion"  />
+        <Tab label="Home LifeStyle"  />
+        <Tab label="Sports"  />
+        <Tab label="Automotive"  />
         
       </Tabs>
+      </Container>
       </Grid>
       <Grid item xs={8} md={8}>
       <AutoPlaySwipeableViews

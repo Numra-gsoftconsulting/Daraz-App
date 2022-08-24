@@ -7,6 +7,7 @@ import appstore from '../images/app-store.png'
 import gallerystore from '../images/app-gallery.png'
 import Grid from '@mui/material/Grid';
 import { Container } from '@mui/system';
+import Typography from '@mui/material/Typography';
 
 
 function Footer() {
@@ -64,8 +65,13 @@ function Footer() {
   <Grid item xs={2} md={2}>
   <img src={icon} width={44} alt="Voucher"  />
   </Grid>
- <p>Happy Shopping </p>
- <p><b >Download App</b></p>
+  <Typography  variant="h6" sx={{color:'#f85606'}}>
+           Happy Shopping
+          </Typography>
+          <Typography  variant="h6" sx={{color:'#ffff'}}>
+           Download App
+           
+          </Typography>
  <Grid item sx={{display:'flex'}} xs={1}  md={9}>
  <Grid item  xs={1}  md={3}> 
   <img src={appstore} width={74} alt="Voucher"  />

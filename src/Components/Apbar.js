@@ -25,16 +25,16 @@ const theme = createTheme({
 
 function Apbar() {
   return (
-    <Box sx={{ width: '100%', bgcolor: '#ffff', marginTop:'20px;', justifyContent:'center',}}>
+    <Box sx={{ width: '100%', bgcolor: '#ffff', marginTop:'20px;', justifyContent:'center',overflow: 'hidden', fontSize:'10px',}}>
        <ThemeProvider theme={theme}>
        <Grid item xs={1} md={12}> 
       <Grid container spacing={2}>
         <Grid item xs={3} md={4}>
-        <img src={logo} width={134} alt="Logo" />
+        <img src={logo} width={114} alt="Logo" />
         </Grid>
-        <Grid item xs={3} md={4}>
-          <FormControl fullWidth sx={{ m: 1 }} >
-          <TextField  >     <ButtonGroup
+        <Grid item xs={4} md={4}>
+          <FormControl fullWidth md={{ m: 1 }} >
+          <TextField  size="small" >     <ButtonGroup
   disableElevation
   variant="contained"
   aria-label="Disabled elevation buttons"
@@ -47,11 +47,11 @@ function Apbar() {
    
 </FormControl>
         </Grid>
-        <Grid item md={1}  xs={2}>
-        <ShoppingCartIcon sx={{ fontSize: "50px" }} />
+        <Grid item md={1}  xs={1}>
+        <ShoppingCartIcon sx={{ fontSize: "30px" }} />
         </Grid>
         <Grid item md={1} xs={3}>
-        <img src={voucher} width={134} alt="Voucher" />
+        <img src={voucher} width={124} alt="Voucher" />
         </Grid>
        
       </Grid>

@@ -21,6 +21,18 @@ const theme = createTheme({
       },
     },
   });
+  const them = createTheme({
+    palette: {
+      primary: {
+        // Purple and green play nicely together.
+        main: '#017c67',
+      },
+      secondary: {
+        // This is green.A700 as hex.
+        main: '#ffff',
+      },
+    },
+  });
 function Display() {
   return (
     <Box sx={{ width: '100%', bgcolor: '#f5f5f5'}}>
@@ -58,9 +70,23 @@ function Display() {
          <Grid item md={2}>
         </Grid>
          </Grid>
-         <Container>
-            <h1>Products</h1>
+         <Container sx={{display:'flex', fontSize:'8px', justifyContent:'center', justifyContent:'space-between', marginTop:'15px' }}>
+         <ThemeProvider theme={theme}>
+         <Grid item xs={2} md={2}>
+         <Button variant="outlined" >Mart</Button>
+         </Grid>
+         <Grid item xs={2} md={2}>
+         <Button variant="outlined" >Fashion</Button>
+         </Grid>
+         <Grid item xs={2} md={2}>
+         <Button variant="outlined">Beauty</Button>
+         </Grid>
+         <Grid item xs={2} md={2}>
+         <Button variant="outlined">Appliance</Button>
+         </Grid>
+         </ThemeProvider>
          </Container>
+    
         </Box>
   )
 }

@@ -3,7 +3,8 @@ import './App.css';
 import Home from './Pages/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Pages/Login";
-import ProtectedRoute from './Components/ProtectedRoutes';
+import Dashboard from "./Pages/Dashboard";
+import ProtectedRoute from './ProtectedRoutes';
 import SharedLayout from './Pages/SharedLayout';
 
 
@@ -19,10 +20,10 @@ function App() {
    
     <Route path='/' element={<SharedLayout />} >
 
-
-          {/* <Route element={<ProtectedRoute/>}> 
-          <Route path="" element={<Dasboard/>} />
-          </Route> */}
+   
+           <Route element={<ProtectedRoute/>}> 
+          <Route path="Dashboard" element={<Dashboard/>} />
+          </Route> 
           
           <Route index element={<Home/>} />
          

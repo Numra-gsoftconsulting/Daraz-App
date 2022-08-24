@@ -41,17 +41,18 @@ export default function CenteredTabs() {
   return (
    
     <Grid item xs={6} md={12}> 
-    <Box sx={{ width: '100%', bgcolor: '#ececec' }}>
+    <Box sx={{ width: '100%', bgcolor: '#ececec', fontSize:'10px' }}>
          <ThemeProvider theme={theme}>
-      <Tabs value={value} onChange={handleChange} centered   textColor="primary"
+            
+      <Tabs value={value} onChange={handleChange} centered    textColor="primary"
         indicatorColor="primary" > 
      
         <Tab label="SAVE MORE ON APP" />
        
         <Tab label="DARAZ AFFILAIATE PROGRAM" />
-        <Tab label="SELL ON DARAZ" />
+        <Tab label="SELL ON DARAZ"  />
         <Tab label="CUSTOMER CARE" />
-        <Tab label="TRACK MY ORDER" />
+        <Tab label="Dashboard" value="dashboard" to="/dashboard" component={Link} />
         <Tab label="LOGIN" value="login" to="/login" component={Link} />
         <Tab label="SIGNUP" />
         <Tab label="زبان تبدیل کریں" />
